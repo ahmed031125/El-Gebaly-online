@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/} ; {.png">
+    <title>El-Gebaly Online</title>
+
+    <style>
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleColorAnimation {
+            0% {
+                transform: scale(.95);
+                color: #153f46ab;
+            }
+
+            50% {
+                transform: scale(1.1);
+                color: #fff;
+            }
+
+            /* تغيير لون النص إلى الأحمر */
+            100% {
+                transform: scale(.95);
+                color: #153f46ab;
+            }
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #1f232d, #2e3441, #284c64, #1d463b);
+            background-size: 600% 600%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 60px;
+            margin-top: 10px;
+            background: linear-gradient(45deg, #1f232d, #2e3441, #284c64, #122b24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: slideAnimation 1s ease;
+        }
+
+        .link {
+            text-align: center;
+            width: 300%;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 300px;
+            background-color: #6b8aab4d;
+            margin-bottom: 15px;
+            animation: slideAnimation 1s ease;
+        }
+
+        .link img {
+             /* تعديل المسافة بين الصورة والنص */
+            margin-right: 130px;
+            margin-left: -160px;
+            transform-origin: center;
+            transition: transform 0.3s;
+        }
+
+      
+
+        .link:hover img {
+            transform: rotate(360deg);
+        }
+
+        .link:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* تكبير حجم الروابط */
+        .link:nth-child(1) {
+            animation: slideAnimation 1s ease, scaleColorAnimation 3.5s ease 1.5s infinite;
+        }
+
+        .link:nth-child(2) {
+            animation: slideAnimation 2s ease, scaleColorAnimation 3.5s ease 1.8s infinite;
+        }
+
+        .link:nth-child(3) {
+            animation: slideAnimation 3s ease, scaleColorAnimation 3.5s ease 2.1s infinite;
+        }
+
+        .link:nth-child(4) {
+            animation: slideAnimation 4s ease, scaleColorAnimation 3.5s ease 2.4s infinite;
+        }
+        .link:nth-child(5) {
+            animation: slideAnimation 5s ease, scaleColorAnimation 3.5s ease 2.7s infinite;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url("images/}\ ;\ {.png");
+            background-size: cover;
+            margin-top: -60px;
+        }
+        .second-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url("images/420517417_390672433625126_327062915759869094_n.jpg"); /* قم بتعيين مسار الصورة الثانية */
+            background-size: cover;
+            display: none;
+            margin-top: -60px;
+        }
+
+
+         /* تنفيذ تغيير الصورة عند التحويل (hover) */
+         .profile-image:hover {
+            display: none;
+        }
+
+        .profile-image:hover + .second-image {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image-container">
+        <div class="profile-image first-image"></div>
+        <div class="second-image"></div>
+    </div>
+
+    <div class="logo">elgebaly</div>
+    <nav>
+        <a class="link" href="https://www.facebook.com/ahmed031125" target="_blank"><img src="images/facebook.png" alt="Facebook" height="25" width="25" > Facebook</a>
+        <a class="link" href="https://www.youtube.com/@print_Mr.X" target="_blank"><img src="images/youtube.png" alt="Youtube" height="25" width="25" >Youtube</a>
+        <a class="link" href="https://www.linkedin.com/in/ahmed031125" target="_blank"><img src="images/linkedin.png" alt="Linkedin" height="25" width="25" >Linkedin</a>
+        <a class="link" href="https://twitter.com/ahmed031125" target="_blank"><img src="images/twitter.png" alt="Twitter" height="25" width="25" >Twitter</a>
+        <a class="link" href="https://github.com/ahmed031125" target="_blank"><img src="images/github.png" alt="Github" height="25" width="25" >Github</a>
+
+
+
+    </nav>
+
+</body>
+
+</html>
